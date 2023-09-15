@@ -9,11 +9,13 @@ console.log("hello my friend");
 }
 document.write("the value of a plus b is ",a+b);//this won't work
 */
+/*
 {
     var x=3;
     var y=6;
     document.write("\nthe value of a plus b is ",x+y);
 }
+*/
 //document.write("the value of a plus b is ",x+y);
 document.write(typeof(x));
 var m="\n this is";
@@ -29,7 +31,7 @@ var equal=document.write("the numbers are ",!(x==y)?" not equal":"equal");
 
 
 const date=new Date();
-<br></br>
+
 document.write(date);
 
 
