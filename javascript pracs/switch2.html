@@ -8,7 +8,7 @@
     <div id="demo"></div>
     <script>
         let day;
-        switch (new Date().getDay())
+        switch (new Date().getDay())//the getDay() returns the current day of the week.
         {
             case 0:
                 day="Monday";
@@ -36,6 +36,20 @@
 
         }
         document.getElementById("demo").innerHTML="Today is " +day;
+     
+        let user=prompt("are you a first time visitor to this page? yes/no").toLowerCase();
+
+        switch(user){
+            case "yes":
+                console.log("welcome visitor");
+                alert("welcome. please sign up to continue!")
+                break;
+            case "no":
+                console.log("welcome back");
+                alert("sign in to go to your dashboard")
+            default:
+                console.log("Invalid input, choose either yes or no");
+;        }
     </script>
 </body>
 </html>
