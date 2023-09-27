@@ -6,30 +6,32 @@
 </head>
 <body>
     <div id="demo"></div>
+    <div id="currentDate"></div>
+    <div id="currentTime"></div>
     <script>
         let day;
         switch (new Date().getDay())//the getDay() returns the current day of the week.
         {
             case 0:
-                day="Monday";
+                day="Sunday";
                 break;
             case 1:
-                day="Tuesday";
+                day="Monday";
                 break;
             case 2:
-                day="Wednesday";
+                day="Tuesday";
                 break;
             case 3:
-                day="Thursday";
+                day="Wednesday";
                 break;
             case 4:
-                day="Friday";
+                day="Thursday";
                 break;
             case 5:
-                day="Saturday";
+                day="Friday";
                 break;
             case 6:
-                day="Sunday";
+                day="Saturday";
                 break;
             default:
                 console.log("invalid");
@@ -49,7 +51,41 @@
                 alert("sign in to go to your dashboard")
             default:
                 console.log("Invalid input, choose either yes or no");
-;        }
+      }
+      
+      let daytoday=new Date().getDate();
+      let month=new Date().getMonth()+1;
+      let year=new Date().getFullYear();
+
+      if(month>10){
+        month='0'+ month;
+      }
+      if(day<10){
+        daytoday='0'+daytoday;
+      }
+      
+      
+      let currentDate = `${daytoday}/${month}/${year}`;
+     console.log(currentDate);
+     document.getElementById("currentDate").innerHTML="Today's date is " + currentDate;
+
+     let hour=new Date().getHours();
+     let minute=new Date().getMinutes();
+     let seconds=new Date().getSeconds();
+
+     if (minute<10){
+        minute='0'+ minute;
+     }
+     if (seconds<10){
+        minute='0'+ seconds;
+     }
+
+     let currentTime=`${hour}:${minute}:${seconds}`;
+     console.log(currentDate);
+     document.getElementById("currentTime").innerHTML="It is now " + currentTime;
     </script>
+
+
 </body>
 </html>
+
